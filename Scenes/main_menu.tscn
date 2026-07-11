@@ -1,0 +1,168 @@
+[gd_scene load_steps=3 format=3 uid="uid://main_menu"]
+
+[ext_resource type="Script" path="res://Scripts/base/main_menu.gd" id="1_menu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.05, 0.05, 0.08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.1, 0.1, 0.15, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.5, 0.2, 1)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_left = 0
+corner_radius_bottom_right = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.6, 0.5, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.85, 0.3, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+bg_color = Color(0.4, 0.35, 0.1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.85, 0.3, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.05, 0.05, 0.08, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.5, 0.2, 1)
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.08, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(280, 0)
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+text = "MY GAME"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_shadow_color = Color(0.6, 0.3, 0, 0.8)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+
+[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer"]
+text = "[ an adventure awaits ]"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.6, 0.55, 0.35, 1)
+
+[node name="Separator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+theme_override_colors/separation_color = Color(0.6, 0.5, 0.2, 0.4)
+theme_override_constants/separation = 16
+
+[node name="BtnPlay" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+text = "▶  JUGAR"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_colors/font_pressed_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+
+[node name="BtnOptions" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+text = "⚙  OPCIONES"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_colors/font_pressed_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+
+[node name="BtnQuit" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+text = "✕  SALIR"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.8, 0.4, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_colors/font_pressed_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+
+[node name="Version" type="Label" parent="."]
+anchors_preset = 4
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -24.0
+offset_bottom = -4.0
+text = "v0.1"
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.4, 0.4, 0.4, 1)
+
+[node name="OptionsPanel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="OptionsPanel/VBoxContainer"]
+text = "OPCIONES"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+
+[node name="Label" type="Label" parent="OptionsPanel/VBoxContainer"]
+text = "Próximamente..."
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.6, 0.55, 0.35, 1)
+
+[node name="BtnClose" type="Button" parent="OptionsPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+text = "← VOLVER"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")

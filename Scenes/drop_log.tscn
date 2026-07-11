@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cao1d2exydn8x"]
+
+[ext_resource type="Script" uid="uid://bfb8nfr8fs3ua" path="res://Scripts/Base/drop_log.gd" id="1_apa7a"]
+
+[node name="DropLog" type="CanvasLayer"]
+script = ExtResource("1_apa7a")
+
+[node name="Container" type="VBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 750.0
+offset_right = 50.0
+offset_bottom = 790.0
+alignment = 2

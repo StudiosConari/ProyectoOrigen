@@ -1,0 +1,83 @@
+# ============================================================
+# PROYECTO ORIGEN — REPOSITORIO PÚBLICO
+# Este archivo debe existir antes del primer commit.
+# ============================================================
+
+# Godot 4: caché y datos generados
+.godot/
+.import/
+*.import
+*.translation
+
+# Temporales y copias automáticas de escenas
+*.tmp
+*.temp
+*~
+*.bak
+*.backup
+*.tscn[0-9]*.tmp
+
+# Exportaciones y compilaciones
+/android/
+/build/
+/builds/
+/dist/
+/exports/
+/release/
+/out/
+export.cfg
+export_presets.cfg
+*.exe
+*.msi
+*.dmg
+*.AppImage
+*.appimage
+
+# Recursos de Tiny Swords y otros terceros no redistribuibles
+/Assets/Tiny Swords (Free Pack)/
+/Assets/Tiny Swords (Enemy Pack)/
+/Assets/Tiny Swords (Update 010)/
+**/Tiny Swords/**
+**/*Tiny*Swords*/
+
+# Recursos visuales privados o derivados
+/Assets/Icons/
+/Assets-Private/*
+!/Assets-Private/.gitkeep
+/ThirdParty-Private/
+/PrivateAssets/
+/LocalAssets/
+
+# Archivos fuente y paquetes de recursos
+*.aseprite
+*.psd
+*.xcf
+*.kra
+*.ai
+*.zip
+*.rar
+*.7z
+
+# Git LFS local / descargas privadas
+*.lfs-private
+/.lfs-private/
+
+# Editores e IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Archivos sensibles o locales
+.env
+.env.*
+!.env.example
+secrets.*
+credentials.*

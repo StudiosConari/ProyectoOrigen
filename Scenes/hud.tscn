@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4cuhthxadq61"]
+
+[ext_resource type="Script" uid="uid://cykabl06k50ni" path="res://Scripts/Base/hud.gd" id="1_e0onf"]
+
+[sub_resource type="Theme" id="Theme_e0onf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fccik"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjfho"]
+bg_color = Color(0.9, 0, 0.225, 1)
+
+[sub_resource type="Theme" id="Theme_6fbih"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1xeu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36asn"]
+bg_color = Color(0, 0.667364, 0.8059817, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_e0onf")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 110.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 90.0
+
+[node name="ExpLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ClassExpLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_e0onf")
+theme_override_styles/background = SubResource("StyleBoxFlat_fccik")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bjfho")
+value = 100.0
+
+[node name="SPBar" type="ProgressBar" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_6fbih")
+theme_override_styles/background = SubResource("StyleBoxFlat_t1xeu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_36asn")
+max_value = 50.0
+value = 50.0

@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://vwdtqc6mbrjd"]
+
+[ext_resource type="Script" uid="uid://45bpigld6ltr" path="res://Scripts/Mecanicas/inventory_ui.gd" id="1_8su62"]
+
+[node name="InventoryUI" type="CanvasLayer"]
+script = ExtResource("1_8su62")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1480.0
+offset_top = 50.0
+offset_right = -30.0
+offset_bottom = -610.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
+
+[node name="Inventario" type="VBoxContainer" parent="Panel/TabContainer"]
+custom_minimum_size = Vector2(390, 170)
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="CharacterPanel" type="Control" parent="Panel/TabContainer/Inventario"]
+custom_minimum_size = Vector2(390, 185)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ItemGrid" type="GridContainer" parent="Panel/TabContainer/Inventario"]
+layout_mode = 2
+
+[node name="Espiritus" type="VBoxContainer" parent="Panel/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(390, 170)
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="CharacterPanel" type="Control" parent="Panel/TabContainer/Espiritus"]
+custom_minimum_size = Vector2(390, 185)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="SpiritGrid" type="GridContainer" parent="Panel/TabContainer/Espiritus"]
+layout_mode = 2
+
+[node name="CoinsLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 200.0
+offset_right = 103.0
+offset_bottom = 223.0
+text = "Monedas : 0"
